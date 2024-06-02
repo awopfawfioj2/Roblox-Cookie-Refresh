@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 async function fetchSessionCSRFToken(roblosecurityCookie) {
     try {
@@ -56,7 +56,4 @@ async function redeemAuthTicket(authTicket) {
     }
 }
 
-module.exports = {
-    generateAuthTicket,
-    redeemAuthTicket
-};
+export { generateAuthTicket, redeemAuthTicket };
